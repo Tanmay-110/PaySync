@@ -1,0 +1,94 @@
+{
+  "razorpay_success": {
+    "order_id": "ORD001",
+    "amount": 100.00,
+    "status": "success",
+    "gateway_id": "pay_1234567890",
+    "gateway_name": "razorpay",
+    "currency": "USD",
+    "gateway_response": {
+      "razorpay_payment_id": "pay_1234567890",
+      "razorpay_order_id": "order_1234567890",
+      "razorpay_signature": "signature_1234567890",
+      "status": "captured"
+    }
+  },
+  "razorpay_failed": {
+    "order_id": "ORD002",
+    "amount": 250.50,
+    "status": "failed",
+    "gateway_id": "pay_1234567891",
+    "gateway_name": "razorpay",
+    "currency": "USD",
+    "gateway_response": {
+      "razorpay_payment_id": "pay_1234567891",
+      "razorpay_order_id": "order_1234567891",
+      "error": {
+        "code": "BAD_REQUEST_ERROR",
+        "description": "Payment failed due to insufficient funds"
+      }
+    }
+  },
+  "stripe_success": {
+    "order_id": "ORD003",
+    "amount": 75.25,
+    "status": "success",
+    "gateway_id": "pi_1234567890",
+    "gateway_name": "stripe",
+    "currency": "USD",
+    "gateway_response": {
+      "stripe_payment_intent_id": "pi_1234567890",
+      "stripe_charge_id": "ch_1234567890",
+      "status": "succeeded",
+      "amount_received": 7525
+    }
+  },
+  "stripe_partial": {
+    "order_id": "ORD004",
+    "amount": 125.25,
+    "status": "partial",
+    "gateway_id": "pi_1234567891",
+    "gateway_name": "stripe",
+    "currency": "USD",
+    "gateway_response": {
+      "stripe_payment_intent_id": "pi_1234567891",
+      "stripe_charge_id": "ch_1234567891",
+      "status": "requires_payment_method",
+      "amount_received": 0
+    }
+  },
+  "paypal_success": {
+    "order_id": "ORD005",
+    "amount": 500.00,
+    "status": "success",
+    "gateway_id": "PAYID-1234567890",
+    "gateway_name": "paypal",
+    "currency": "USD",
+    "gateway_response": {
+      "paypal_payment_id": "PAYID-1234567890",
+      "paypal_order_id": "ORDER-1234567890",
+      "status": "COMPLETED",
+      "amount": {
+        "total": "500.00",
+        "currency": "USD"
+      }
+    }
+  },
+  "square_success": {
+    "order_id": "ORD006",
+    "amount": 150.75,
+    "status": "success",
+    "gateway_id": "sq_payment_1234567890",
+    "gateway_name": "square",
+    "currency": "USD",
+    "gateway_response": {
+      "square_payment_id": "sq_payment_1234567890",
+      "square_order_id": "sq_order_1234567890",
+      "status": "COMPLETED",
+      "amount_money": {
+        "amount": 15075,
+        "currency": "USD"
+      }
+    }
+  }
+}
